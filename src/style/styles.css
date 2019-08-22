@@ -1,5 +1,23 @@
+.wrapper {
+  margin: 0 auto;
+  width: 300px;
+  border: 1px solid;
+}
+
+.header-title {
+  border-bottom: 1px solid; 
+  padding: 10px;
+}
+
+.italic-font {
+  font-size: 14px; 
+  font-style: italic; 
+  margin-bottom: 5px;
+}
+
 .curr-val {
   width: 100px;
   text-align: right;
-  float: 'right';
+  font-weight: 600;
+  font-size: 16px
 }
