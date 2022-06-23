@@ -20,7 +20,13 @@ class App extends React.Component {
     if (currencies) listCurr = currencies
     else listCurr = this.state.currencies.join()
 
-    axios.get(`https://api.exchangeratesapi.io/latest?base=USD&symbols=${listCurr}`)
+    axios.get(`https://api.apilayer.com/exchangerates_data/latest?base=USD&symbols=${listCurr}`, 
+      {
+        headers: {
+          'apikey': 'iwqIoDXhQEPLz094fFJ5MS2izsLPIPSP'
+        }
+      }
+    )
     .then( res => {
       this.setState({
         currList: res.data.rates
